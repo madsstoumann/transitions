@@ -2,254 +2,629 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/png" href="https://madsstoumann.github.io/transitions/assets/favicon.ico" sizes="any">
-		<link rel="icon" type="image/svg+xml" href="https://madsstoumann.github.io/transitions/assets/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
-		<link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiU0lURS1OQU1FIiwKICAgICJkZXNjcmlwdGlvbiI6ICJTSVRFLURFU0NSSVBUSU9OIiwKICAgICJiYWNrZ3JvdW5kX2NvbG9yIjogImhzbCgyMTksIDc5JSwgNTAlKSIsCiAgICAiY2F0ZWdvcmllcyI6IFsiYnVzaW5lc3MiLCAicHJvZHVjdGl2aXR5Il0sCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAgICJpY29ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJzcmMiOiAiL3NyYy9hc3NldHMvZmF2aWNvbnMvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAogICAgICAgICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgInNyYyI6ICIvc3JjL2Fzc2V0cy9mYXZpY29ucy9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAibGFuZyI6ICJlbi1VUyIsCiAgICAib3JpZW50YXRpb24iOiAiYW55IiwKICAgICJzaG9ydF9uYW1lIjogIlNJVEUtTkFNRSIsCiAgICAic3RhcnRfdXJsIjogIi8iLAogICAgInRoZW1lX2NvbG9yIjogImhzbCgyMTksIDc5JSwgNTAlKSIsCiAgICAidXJsIjogImh0dHBzOi8vc2l0ZS51cmwiCn0=">
-		<meta name="theme-color" content="hsl(219, 79%, 50%)" media="(prefers-color-scheme: light)">
-		<meta name="theme-color" content="hsl(219, 79%, 50%)" media="(prefers-color-scheme: dark)">
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-		<meta name="Description" content="SITEDESCRIPTION">
-		<title>Peelzee</title>
+		<title>Transitions</title>
 
 		<script type="module" crossorigin src="https://madsstoumann.github.io/transitions/assets/index.js"></script>
 		<link rel="stylesheet" href="https://madsstoumann.github.io/transitions/assets/index.css">
+
 		<style>
+			[data-content] { position: relative; }
+			body {
+				--body-grid-template-rows: 1fr;
+			}
+			button {
+				align-self: baseline;
+				font-family: monospace;
+				margin-inline-start: auto;
+				padding: 2ch 4ch;
+			}
+			code {
+				tab-size: 2;
+			}
+			details {
+				font-family: monospace;
+				inset-block-start: calc(100% - 2ch);
+				position: sticky;
+			}
 			fieldset {
+				border: 1px dotted #555;
 				gap: 1ch;
 				display: flex;
+				flex-direction: column;
 			}
-			label strong {
+			form {
+				display: flex;
+				gap: 1ch;
+			}
+			h2 {
+				position: relative;
+				z-index: 1;
+			}
+			img {
+				height: 100%;
+				inset: 0;
+				object-fit: cover;
+				position: absolute;
+				width: 100%;
+			}
+			input, select {
+				font-family: monospace !important;
+				font-size: 1em;
+			}
+			label strong, legend {
 				display: block;
 				font-family: ui-monospace, monospace;
+				font-size: x-small;
+			}
+			main {
+				align-content: flex-start;
+				block-size: 100%;
+				overflow-x: hidden;
+			}
+			pre {
+				--layout-bg: hsl(0, 0%, 12%);
+				color: hsl(218, 70%, 92%);
 				font-size: small;
+				padding: 3ch;
+			}
+
+			@media (max-width: 1024px) {
+				form {
+					flex-direction: column;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<main id="main" style="align-content:flex-start;height:100vh;overflow-x:hidden;">
 
-			<div class="headline" data-layout="default flex page-gap">
-				<h1>Animations &amp; Transitions</h1>
+		<main data-layout="default page-gap">
 
+			<div class="headline" data-layout="flex">
+				<h1>Transitions Editor</h1>
 			</div>
-			<fieldset data-layout="default" id="app">
-				<label>
-					<strong>Transition</strong>
-					<select id="transition">
-						<option>none</option>
-						<optgroup label="fade">
-							<option>fade-down</option>
-							<option>fade-down-left</option>
-							<option>fade-down-right</option>
-							<option>fade-left</option>
-							<option>fade-right</option>
-							<option>fade-up</option>
-							<option>fade-up-left</option>
-							<option>fade-up-right</option>
-						</optgroup>
-						<optgroup label="flip">
-							<option>flip-down</option>
-							<option>flip-left</option>
-							<option>flip-right</option>
-							<option>flip-up</option>
-						</optgroup>
-						<optgroup label="zoom">
-							<option>zoom-in</option>
-							<option>zoom-in-down</option>
-							<option>zoom-in-up</option>
-							<option>zoom-out</option>
-						</optgroup>
-					</select>
-				</label>
-				<label>
-					<strong>Easing</strong>
-					<select id="easing">
-						<optgroup label="ease">
-							<option selected>ease-1</option>
-							<option>ease-2</option>
-							<option>ease-3</option>
-							<option>ease-4</option>
-							<option>ease-5</option>
-						</optgroup>
-						<optgroup label="ease-in">
-							<option>ease-in-1</option>
-							<option>ease-in-2</option>
-							<option>ease-in-3</option>
-							<option>ease-in-4</option>
-							<option>ease-in-5</option>
-						</optgroup>
-						<optgroup label="ease-out">
-							<option>ease-out-1</option>
-							<option>ease-out-2</option>
-							<option>ease-out-3</option>
-							<option>ease-out-4</option>
-							<option>ease-out-5</option>
-						</optgroup>
-						<optgroup label="ease-in-out">
-							<option>ease-in-out-1</option>
-							<option>ease-in-out-2</option>
-							<option>ease-in-out-3</option>
-							<option>ease-in-out-4</option>
-							<option>ease-in-out-5</option>
-						</optgroup>
-						<optgroup label="ease-elastic">
-							<option>ease-elastic-1</option>
-							<option>ease-elastic-2</option>
-							<option>ease-elastic-3</option>
-							<option>ease-elastic-4</option>
-							<option>ease-elastic-5</option>
-						</optgroup>
-						<optgroup label="ease-squish">
-							<option>ease-squish-1</option>
-							<option>ease-squish-2</option>
-							<option>ease-squish-3</option>
-							<option>ease-squish-4</option>
-							<option>ease-squish-5</option>
-						</optgroup>
-						<option>linear</option>
-					</select>
-				</label>
-				<label>
-					<strong>Duration</strong>
-					<select id="duration">
-						<option>100ms</option>
-						<option>200ms</option>
-						<option>300ms</option>
-						<option selected>400ms</option>
-						<option>500ms</option>
-						<option>750ms</option>
-						<option>1000ms</option>
-						<option>1500ms</option>
-						<option>2000ms</option>
-					</select>
-				</label>
-				<label>
-					<strong>CH: Transition</strong>
-					<select id="chtransition">
-						<option>none</option>
-						<optgroup label="fade">
-							<option>fade-in</option>
-							<option>fade-down</option>
-							<option>fade-up</option>
-						</optgroup>
-						<optgroup label="text">
-							<option>split</option>
-						</optgroup>
-					</select>
-				</label>
-				<label>
-					<strong>CH: Easing</strong>
-					<select id="cheasing">
-						<optgroup label="ease">
-							<option selected>ease-1</option>
-							<option>ease-2</option>
-							<option>ease-3</option>
-							<option>ease-4</option>
-							<option>ease-5</option>
-						</optgroup>
-						<optgroup label="ease-in">
-							<option>ease-in-1</option>
-							<option>ease-in-2</option>
-							<option>ease-in-3</option>
-							<option>ease-in-4</option>
-							<option>ease-in-5</option>
-						</optgroup>
-						<optgroup label="ease-out">
-							<option>ease-out-1</option>
-							<option>ease-out-2</option>
-							<option>ease-out-3</option>
-							<option>ease-out-4</option>
-							<option>ease-out-5</option>
-						</optgroup>
-						<optgroup label="ease-in-out">
-							<option>ease-in-out-1</option>
-							<option>ease-in-out-2</option>
-							<option>ease-in-out-3</option>
-							<option>ease-in-out-4</option>
-							<option>ease-in-out-5</option>
-						</optgroup>
-						<optgroup label="ease-elastic">
-							<option>ease-elastic-1</option>
-							<option>ease-elastic-2</option>
-							<option>ease-elastic-3</option>
-							<option>ease-elastic-4</option>
-							<option>ease-elastic-5</option>
-						</optgroup>
-						<optgroup label="ease-squish">
-							<option>ease-squish-1</option>
-							<option>ease-squish-2</option>
-							<option>ease-squish-3</option>
-							<option>ease-squish-4</option>
-							<option>ease-squish-5</option>
-						</optgroup>
-						<option>linear</option>
-					</select>
-				</label>
-				<label>
-					<strong>CH: Duration</strong>
-					<select id="chduration">
-						<option>100ms</option>
-						<option>200ms</option>
-						<option>300ms</option>
-						<option selected>400ms</option>
-						<option>500ms</option>
-						<option>750ms</option>
-						<option>1000ms</option>
-						<option>1500ms</option>
-						<option>2000ms</option>
-					</select>
-				</label>
-				<label>
-					<strong>CH: delay</strong>
-					<select id="chdelay">
-						<option>0ms</option>
-						<option>25ms</option>
-						<option selected>50ms</option>
-						<option>75ms</option>
-						<option>100ms</option>
-						<option>150ms</option>
-						<option>200ms</option>
-					</select>
-				</label>
+
+			<form id="app">
+				<fieldset>
+					<legend>Main</legend>
+					<label>
+						<strong>Transition</strong>
+						<select id="transition">
+							<option>none</option>
+							<optgroup label="fade">
+								<option>fade-down</option>
+								<option>fade-down-left</option>
+								<option>fade-down-right</option>
+								<option>fade-left</option>
+								<option>fade-right</option>
+								<option>fade-up</option>
+								<option>fade-up-left</option>
+								<option>fade-up-right</option>
+							</optgroup>
+							<optgroup label="flip">
+								<option>flip-down</option>
+								<option>flip-left</option>
+								<option>flip-right</option>
+								<option>flip-up</option>
+							</optgroup>
+							<optgroup label="zoom">
+								<option>zoom-in</option>
+								<option>zoom-in-down</option>
+								<option>zoom-in-up</option>
+								<option>zoom-out</option>
+							</optgroup>
+						</select>
+					</label>
+					<label>
+						<strong>Easing</strong>
+						<select id="easing">
+							<optgroup label="ease">
+								<option selected>ease-1</option>
+								<option>ease-2</option>
+								<option>ease-3</option>
+								<option>ease-4</option>
+								<option>ease-5</option>
+							</optgroup>
+							<optgroup label="ease-in">
+								<option>ease-in-1</option>
+								<option>ease-in-2</option>
+								<option>ease-in-3</option>
+								<option>ease-in-4</option>
+								<option>ease-in-5</option>
+							</optgroup>
+							<optgroup label="ease-out">
+								<option>ease-out-1</option>
+								<option>ease-out-2</option>
+								<option>ease-out-3</option>
+								<option>ease-out-4</option>
+								<option>ease-out-5</option>
+							</optgroup>
+							<optgroup label="ease-in-out">
+								<option>ease-in-out-1</option>
+								<option>ease-in-out-2</option>
+								<option>ease-in-out-3</option>
+								<option>ease-in-out-4</option>
+								<option>ease-in-out-5</option>
+							</optgroup>
+							<optgroup label="ease-elastic">
+								<option>ease-elastic-1</option>
+								<option>ease-elastic-2</option>
+								<option>ease-elastic-3</option>
+								<option>ease-elastic-4</option>
+								<option>ease-elastic-5</option>
+							</optgroup>
+							<optgroup label="ease-squish">
+								<option>ease-squish-1</option>
+								<option>ease-squish-2</option>
+								<option>ease-squish-3</option>
+								<option>ease-squish-4</option>
+								<option>ease-squish-5</option>
+							</optgroup>
+							<option>linear</option>
+						</select>
+					</label>
+					<label>
+						<strong>Duration</strong>
+						<select id="duration">
+							<option>100ms</option>
+							<option>200ms</option>
+							<option>300ms</option>
+							<option selected>400ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+					<label>
+						<strong>Delay</strong>
+						<select id="delay">
+							<option selected>0ms</option>
+							<option>25ms</option>
+							<option>50ms</option>
+							<option>75ms</option>
+							<option>100ms</option>
+							<option>150ms</option>
+							<option>250ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Child 1</legend>
+					<label>
+						<strong>Transition</strong>
+						<select id="ch1transition">
+							<option>none</option>
+							<optgroup label="fade">
+								<option>fade-down</option>
+								<option>fade-down-left</option>
+								<option>fade-down-right</option>
+								<option>fade-left</option>
+								<option>fade-right</option>
+								<option>fade-up</option>
+								<option>fade-up-left</option>
+								<option>fade-up-right</option>
+							</optgroup>
+							<optgroup label="flip">
+								<option>flip-down</option>
+								<option>flip-left</option>
+								<option>flip-right</option>
+								<option>flip-up</option>
+							</optgroup>
+							<optgroup label="zoom">
+								<option>zoom-in</option>
+								<option>zoom-in-down</option>
+								<option>zoom-in-up</option>
+								<option>zoom-out</option>
+							</optgroup>
+						</select>
+					</label>
+					<label>
+						<strong>Easing</strong>
+						<select id="ch1easing">
+							<optgroup label="ease">
+								<option selected>inherit</option>
+								<option>ease-1</option>
+								<option>ease-2</option>
+								<option>ease-3</option>
+								<option>ease-4</option>
+								<option>ease-5</option>
+							</optgroup>
+							<optgroup label="ease-in">
+								<option>ease-in-1</option>
+								<option>ease-in-2</option>
+								<option>ease-in-3</option>
+								<option>ease-in-4</option>
+								<option>ease-in-5</option>
+							</optgroup>
+							<optgroup label="ease-out">
+								<option>ease-out-1</option>
+								<option>ease-out-2</option>
+								<option>ease-out-3</option>
+								<option>ease-out-4</option>
+								<option>ease-out-5</option>
+							</optgroup>
+							<optgroup label="ease-in-out">
+								<option>ease-in-out-1</option>
+								<option>ease-in-out-2</option>
+								<option>ease-in-out-3</option>
+								<option>ease-in-out-4</option>
+								<option>ease-in-out-5</option>
+							</optgroup>
+							<optgroup label="ease-elastic">
+								<option>ease-elastic-1</option>
+								<option>ease-elastic-2</option>
+								<option>ease-elastic-3</option>
+								<option>ease-elastic-4</option>
+								<option>ease-elastic-5</option>
+							</optgroup>
+							<optgroup label="ease-squish">
+								<option>ease-squish-1</option>
+								<option>ease-squish-2</option>
+								<option>ease-squish-3</option>
+								<option>ease-squish-4</option>
+								<option>ease-squish-5</option>
+							</optgroup>
+							<option>linear</option>
+						</select>
+					</label>
+					<label>
+						<strong>Duration</strong>
+						<select id="ch1duration">
+							<option>100ms</option>
+							<option>200ms</option>
+							<option>300ms</option>
+							<option selected>400ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+					<label>
+						<strong>Delay</strong>
+						<select id="ch1delay">
+							<option selected>0ms</option>
+							<option>25ms</option>
+							<option>50ms</option>
+							<option>75ms</option>
+							<option>100ms</option>
+							<option>150ms</option>
+							<option>250ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Child 2</legend>
+					<label>
+						<strong>Transition</strong>
+						<select id="ch2transition">
+							<option>none</option>
+							<optgroup label="fade">
+								<option>fade-down</option>
+								<option>fade-down-left</option>
+								<option>fade-down-right</option>
+								<option>fade-left</option>
+								<option>fade-right</option>
+								<option>fade-up</option>
+								<option>fade-up-left</option>
+								<option>fade-up-right</option>
+							</optgroup>
+							<optgroup label="flip">
+								<option>flip-down</option>
+								<option>flip-left</option>
+								<option>flip-right</option>
+								<option>flip-up</option>
+							</optgroup>
+							<optgroup label="zoom">
+								<option>zoom-in</option>
+								<option>zoom-in-down</option>
+								<option>zoom-in-up</option>
+								<option>zoom-out</option>
+							</optgroup>
+						</select>
+					</label>
+					<label>
+						<strong>Easing</strong>
+						<select id="ch2easing">
+							<optgroup label="ease">
+								<option selected>inherit</option>
+								<option>ease-1</option>
+								<option>ease-2</option>
+								<option>ease-3</option>
+								<option>ease-4</option>
+								<option>ease-5</option>
+							</optgroup>
+							<optgroup label="ease-in">
+								<option>ease-in-1</option>
+								<option>ease-in-2</option>
+								<option>ease-in-3</option>
+								<option>ease-in-4</option>
+								<option>ease-in-5</option>
+							</optgroup>
+							<optgroup label="ease-out">
+								<option>ease-out-1</option>
+								<option>ease-out-2</option>
+								<option>ease-out-3</option>
+								<option>ease-out-4</option>
+								<option>ease-out-5</option>
+							</optgroup>
+							<optgroup label="ease-in-out">
+								<option>ease-in-out-1</option>
+								<option>ease-in-out-2</option>
+								<option>ease-in-out-3</option>
+								<option>ease-in-out-4</option>
+								<option>ease-in-out-5</option>
+							</optgroup>
+							<optgroup label="ease-elastic">
+								<option>ease-elastic-1</option>
+								<option>ease-elastic-2</option>
+								<option>ease-elastic-3</option>
+								<option>ease-elastic-4</option>
+								<option>ease-elastic-5</option>
+							</optgroup>
+							<optgroup label="ease-squish">
+								<option>ease-squish-1</option>
+								<option>ease-squish-2</option>
+								<option>ease-squish-3</option>
+								<option>ease-squish-4</option>
+								<option>ease-squish-5</option>
+							</optgroup>
+							<option>linear</option>
+						</select>
+					</label>
+					<label>
+						<strong>Duration</strong>
+						<select id="ch2duration">
+							<option>100ms</option>
+							<option>200ms</option>
+							<option>300ms</option>
+							<option selected>400ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+					<label>
+						<strong>Delay</strong>
+						<select id="ch2delay">
+							<option selected>0ms</option>
+							<option>25ms</option>
+							<option>50ms</option>
+							<option>75ms</option>
+							<option>100ms</option>
+							<option>150ms</option>
+							<option>250ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Child 3</legend>
+					<label>
+						<strong>Transition</strong>
+						<select id="ch3transition">
+							<option>none</option>
+							<optgroup label="fade">
+								<option>fade-down</option>
+								<option>fade-down-left</option>
+								<option>fade-down-right</option>
+								<option>fade-left</option>
+								<option>fade-right</option>
+								<option>fade-up</option>
+								<option>fade-up-left</option>
+								<option>fade-up-right</option>
+							</optgroup>
+							<optgroup label="flip">
+								<option>flip-down</option>
+								<option>flip-left</option>
+								<option>flip-right</option>
+								<option>flip-up</option>
+							</optgroup>
+							<optgroup label="zoom">
+								<option>zoom-in</option>
+								<option>zoom-in-down</option>
+								<option>zoom-in-up</option>
+								<option>zoom-out</option>
+							</optgroup>
+						</select>
+					</label>
+					<label>
+						<strong>Easing</strong>
+						<select id="ch3easing">
+							<optgroup label="ease">
+								<option selected>inherit</option>
+								<option>ease-1</option>
+								<option>ease-2</option>
+								<option>ease-3</option>
+								<option>ease-4</option>
+								<option>ease-5</option>
+							</optgroup>
+							<optgroup label="ease-in">
+								<option>ease-in-1</option>
+								<option>ease-in-2</option>
+								<option>ease-in-3</option>
+								<option>ease-in-4</option>
+								<option>ease-in-5</option>
+							</optgroup>
+							<optgroup label="ease-out">
+								<option>ease-out-1</option>
+								<option>ease-out-2</option>
+								<option>ease-out-3</option>
+								<option>ease-out-4</option>
+								<option>ease-out-5</option>
+							</optgroup>
+							<optgroup label="ease-in-out">
+								<option>ease-in-out-1</option>
+								<option>ease-in-out-2</option>
+								<option>ease-in-out-3</option>
+								<option>ease-in-out-4</option>
+								<option>ease-in-out-5</option>
+							</optgroup>
+							<optgroup label="ease-elastic">
+								<option>ease-elastic-1</option>
+								<option>ease-elastic-2</option>
+								<option>ease-elastic-3</option>
+								<option>ease-elastic-4</option>
+								<option>ease-elastic-5</option>
+							</optgroup>
+							<optgroup label="ease-squish">
+								<option>ease-squish-1</option>
+								<option>ease-squish-2</option>
+								<option>ease-squish-3</option>
+								<option>ease-squish-4</option>
+								<option>ease-squish-5</option>
+							</optgroup>
+							<option>linear</option>
+						</select>
+					</label>
+					<label>
+						<strong>Duration</strong>
+						<select id="ch3duration">
+							<option>100ms</option>
+							<option>200ms</option>
+							<option>300ms</option>
+							<option selected>400ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+					<label>
+						<strong>Delay</strong>
+						<select id="ch3delay">
+							<option selected>0ms</option>
+							<option>25ms</option>
+							<option>50ms</option>
+							<option>75ms</option>
+							<option>100ms</option>
+							<option>150ms</option>
+							<option>250ms</option>
+							<option>500ms</option>
+							<option>750ms</option>
+							<option>1000ms</option>
+							<option>1500ms</option>
+							<option>2000ms</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Variables</legend>
+					<label>
+						<strong>Zoom-in</strong>
+						<input type="number" name="--zi" value="0.6" step="0.1" min="0.1" max="1" />
+					</label>
+					<label>
+						<strong>Zoom-out</strong>
+						<input type="number" name="--zo" value="1.2" step="0.1" min="1" max="5" />
+					</label>
+					<label>
+						<strong>Translate X</strong>
+						<input type="number" name="--tx" value="55" step="1" min="1" max="999" data-suffix="px" />
+					</label>
+					<label>
+						<strong>Translate Y</strong>
+						<input type="number" name="--ty" value="110" step="1" min="1" max="999" data-suffix="px" />
+					</label>
+				</fieldset>
+
 				<button type="button" id="play">Re-Play</button>
-			</fieldset>
+			</form>
+<!--
+<div data-layout="default lay-A_1-2|3 grid" data-scroll id="demo">
+	<div data-content>
+		<h2>C1</h2>
+		<p class="text" data-trs>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laudantium illo facilis officiis ut placeat voluptatum explicabo ipsam et quae debitis, pariatur nulla possimus corrupti cupiditate sed iure libero ratione dolorum dolorem, molestiae neque iste rerum. Ducimus architecto necessitatibus quam iure id animi, voluptatibus ab voluptates consectetur doloremque delectus quae.</p>
+	</div>
+	<div data-content>
+		<h2>C2</h2>
+		<p class="text" data-trs>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ullam.</p>
+	</div>
+	<div data-content>
+		<h2>C3</h2>
+		<p class="text" data-trs>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ullam.</p>
+	</div>
+</div> -->
 
-			<div data-layout="default lay-A_1-2|3 grid page-gap" data-scroll id="demo">
-				<div data-content>
-					<h2>A1</h2>
-					<p class="text" data-scroll-child>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laudantium illo facilis officiis ut placeat voluptatum explicabo ipsam et quae debitis, pariatur nulla possimus corrupti cupiditate sed iure libero ratione dolorum dolorem, molestiae neque iste rerum. Ducimus architecto necessitatibus quam iure id animi, voluptatibus ab voluptates consectetur doloremque delectus quae.</p>
-				</div>
-				<div data-content>
-					<h2>A2</h2>
-					<p class="text" data-scroll-child>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ullam.</p>
-				</div>
-				<div data-content>
-					<h2>A3</h2>
-					<p class="text" data-scroll-child>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ullam.</p>
-				</div>
-			</div>
+<div data-layout="default lay-A_1-2|3 grid" id="demo">
+	<div data-content data-trs>
+		<h2>C1</h2>
+		<img src="https://picsum.photos/800/450" />
+	</div>
+	<div data-content data-trs>
+		<h2>C2</h2>
+		<img src="https://picsum.photos/390/225" />
+	</div>
+	<div data-content data-trs>
+		<h2>C3</h2>
+		<img src="https://picsum.photos/385/225" />
+	</div>
+</div>
 
-			<code data-layout="default page-gap" id="code"></code>
+		<details>
+			<summary>Show code</summary>
+			<pre data-layout="default"><code id="code"></code></pre>
+		</details>
 
 		</main>
 
 
-		<script type="module" src="/main.js"></script>
+		<!-- <script type="module" src="/main.js"></script> -->
 		<script>
-			const nodes = demo.querySelectorAll('[data-scroll-child]');
-			const playIt = () => { demo.classList.remove('animate'); setTimeout(() => { demo.classList.add('animate'); }, 400); }
+			const nodes = demo.querySelectorAll('[data-trs]');
+			const playIt = () => { demo.classList.remove('trs'); setTimeout(() => { demo.classList.add('trs'); }, 400); }
 
 			app.addEventListener('input', (event) => {
 				const id = event.target.id;
-				demo.dataset.scroll = transition.value;
-				demo.dataset.scrollDelay = chdelay.value;
-				demo.dataset.scrollDuration = duration.value;
-				demo.dataset.scrollEasing = easing.value;
+				demo.dataset.trs = transition.value;
+				demo.dataset.trsde = delay.value;
+				demo.dataset.trsdu = duration.value;
+				demo.dataset.trstf = easing.value;
 
-				if (id === 'chduration') nodes.forEach(node => node.dataset.scrollDuration = chduration.value)
-				if (id === 'cheasing') nodes.forEach(node => node.dataset.scrollEasing = cheasing.value)
-				if (id === 'chtransition') nodes.forEach(node => node.dataset.scrollChild = chtransition.value)
+				if (event.target.name) {
+					demo.style.setProperty(event.target.name, event.target.value + (event.target.dataset.suffix||''));
+				}
+
+				if (id === 'ch1delay') nodes[0].dataset.trsde = ch1delay.value;
+				if (id === 'ch1duration') nodes[0].dataset.trsdu = ch1duration.value;
+				if (id === 'ch1easing') nodes[0].dataset.trstf = ch1easing.value;
+				if (id === 'ch1transition') nodes[0].dataset.trs = ch1transition.value;
+				if (id === 'ch2delay') nodes[1].dataset.trsde = ch2delay.value;
+				if (id === 'ch2duration') nodes[1].dataset.trsdu = ch2duration.value;
+				if (id === 'ch2easing') nodes[1].dataset.trstf = ch2easing.value;
+				if (id === 'ch2transition') nodes[1].dataset.trs = ch2transition.value;
+				if (id === 'ch3delay') nodes[2].dataset.trsde = ch3delay.value;
+				if (id === 'ch3duration') nodes[2].dataset.trsdu = ch3duration.value;
+				if (id === 'ch3easing') nodes[2].dataset.trstf = ch3easing.value;
+				if (id === 'ch3transition') nodes[2].dataset.trs = ch3transition.value;
+
+				let str = demo.outerHTML;
+				str = str.replace(/\s*data-layout\s*=\s*"[^"]*"/g, '').replace(/\s*data-content\s*=\s*"[^"]*"/g, '').replace(/\s*id\s*=\s*"[^"]*"/g, '')
+				code.innerText = str
+
 				playIt();
 			})
 
